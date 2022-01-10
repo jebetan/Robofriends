@@ -3,14 +3,15 @@ import './SearchBox.css';
 
 const SearchBox = ({ searchfield, searchChange }) => {
 	return (
-	 <div className='pa2'>
+	 <section className='pa2'>
+	 <h1 className='f1'>RoboFriends</h1>
 	 <input 
 			className='pa3 ba b--green bg-lightest-blue'
 			type='search' 
 			placeholder= 'Search Robots' 
 			onChange={searchChange}
 			/>
-		</div>
+		</section>
 	);
 }
 
