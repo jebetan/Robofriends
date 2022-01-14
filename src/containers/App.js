@@ -35,7 +35,7 @@ class App extends Component {
 		})
 
 		return isPending ?
-		<h1> Loading </h1> :
+		<h1> Loading Please Wait </h1> :
 			(
 				<div className='tc'>
 					<SearchBox searchChange={onSearchChange}/>
