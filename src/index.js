@@ -10,10 +10,10 @@ import App from './containers/App';
 import 'tachyons';
 import reportWebVitals from './reportWebVitals';
 
-const rootReducers = combineReducers({ searchRobots, requestRobots })
+const rootReducers = combineReducers({searchRobots, requestRobots})
 
 const store = 
-createStore( rootReducers, applyMiddleware(thunkMiddleware, createLogger()))
+createStore(rootReducers, applyMiddleware(thunkMiddleware, createLogger()))
 
 ReactDOM.render(
   <React.StrictMode>
