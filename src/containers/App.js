@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 	return {
 		searchField: state.searchRobots.searchField,
 		robots: state.requestRobots.robots,
-		inPending: state.requestRobots.isPending,
+		isPending: state.requestRobots.isPending,
 		error: state.requestRobots.error
 	}
 }
@@ -24,13 +24,12 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
-
 	componentDidMount() {
 		this.props.onRequestRobots();
 	}
 
 	render() {
-		const { searchField, onSearchChange, robots, isPending } = this.props
+		const { searchField, onSearchChange, robots, isPending } = this.props;
 		const filteredRobots = robots.filter(robot => {
 			return robot.name.toLowerCase().includes(searchField.toLowerCase());
 		})
